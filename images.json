@@ -1,82 +1,54 @@
 {
     "images": [
         {
-            "imgPath": "img/places/australia.jpg",
-            "imgLocation": "Australia",
-            "description": "Loch Ard Gorge",
-            "date": "01/01/2016"
+            "imgPath": "img/directors/1stDirector.jpg",
+            "name": "Steven Spielberg",
+            "oneMovie": "Jaws"
         },
         {
-            "imgPath": "img/places/austria.jpg",
-            "imgLocation": "Austria",
-            "description": "Austrian chapel",
-            "date": "01/02/2016"
+            "imgPath": "img/directors/2ndDirector.jpg",
+            "name": "Martin Scorsese",
+            "oneMovie": "Goodfellas"
         },
         {
-            "imgPath": "img/places/france.jpg",
-            "imgLocation": "Paris",
-            "description": "Eiffel Tower",
-            "date": "01/03/2016"
+            "imgPath": "img/directors/3rdDirector.jpg",
+            "name": "Alfred Hitchock",
+            "oneMovie": "Psycho"
         },
         {
-            "imgPath": "img/places/greece.jpg",
-            "imgLocation": "Greece",
-            "description": "Greek coastline",
-            "date": "01/04/2016"
+            "imgPath": "img/directors/4thDirector.jpg",
+            "name": "Stanley Kubrick",
+            "oneMovie": "The Shining"
         },
         {
-            "imgPath": "img/places/hungary.jpg",
-            "imgLocation": "Hungary",
-            "description": "Budapest skyline",
-            "date": "01/05/2016"
+            "imgPath": "img/directors/5thDirector.jpg",
+            "name": "Francis Ford Coppola",
+            "oneMovie": "The Godfather"
         },
         {
-            "imgPath": "img/places/india.jpg",
-            "imgLocation": "India",
-            "description": "Taj Mahal",
-            "date": "01/06/2016"
+            "imgPath": "img/directors/6thDirector.jpg",
+            "name": "Woddy Allen",
+            "oneMovie": "Annie Hall"
         },
         {
-            "imgPath": "img/places/italy.jpg",
-            "imgLocation": "Italy",
-            "description": "Venice",
-            "date": "01/07/2016"
+            "imgPath": "img/directors/7thDirector.jpg",
+            "name": "Billy Wilder",
+            "oneMovie": "Some Like It Hot"
         },
         {
-            "imgPath": "img/places/japan.jpg",
-            "imgLocation": "Japan",
-            "description": "Hirosaki Castle",
-            "date": "01/08/2016"
+            "imgPath": "img/directors/8thDirector.jpg",
+            "name": "Charlie Chaplin",
+            "oneMovie": "City Lights"
         },
         {
-            "imgPath": "img/places/korea.jpg",
-            "imgLocation": "South Korea",
-            "description": "Seoul",
-            "date": "01/09/2016"
+            "imgPath": "img/directors/9thDirector.jpg",
+            "name": "Christopher Nolan",
+            "oneMovie": "Inception"
         },
         {
-            "imgPath": "img/places/norway.jpg",
-            "imgLocation": "Norway",
-            "description": "Countryside mountains",
-            "date": "01/10/2016"
-        },
-        {
-            "imgPath": "img/places/switzerland.jpg",
-            "imgLocation": "Switzerland",
-            "description": "Lake castle",
-            "date": "01/11/2016"
-        },
-        {
-            "imgPath": "img/places/thailand.jpg",
-            "imgLocation": "Thailand",
-            "description": "Beachline",
-            "date": "01/12/2016"
-        },
-        {
-            "imgPath": "img/places/turkey.jpg",
-            "imgLocation": "Turkey",
-            "description": "Istanbul",
-            "date": "01/13/2016"
+            "imgPath": "img/directors/10thDirector.jpg",
+            "name": "Quentin Tarintino",
+            "oneMovie": "Pulp Fiction"
         }
   ]
 }
