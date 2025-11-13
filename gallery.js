@@ -40,6 +40,7 @@ function fetchJSON () {
     url: "mUrl",
     method: "GET",
     dataType: "json"
+      mImages = JSON.parse("mUrl");
   })
 
   // Use $.ajax here to request the JSON data from mUrl
