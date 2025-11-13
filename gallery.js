@@ -7,26 +7,26 @@ $(document).ready(() => {
   $('.details').hide() // Hide details initially
 
   // Call a function here to start the timer for the slideshow
-  function startTimer () {
+  function startTimer() {
     setInterval(showNextPhoto, mWaitTime)
   }
 
   // Select the moreIndicator button and add a click event to:
-  $('.moreIndicator').click(()=> {
-     $('.moreIndicator').toggleClass('rot90 rot270')
-     $('.details').slideToggle()
+  $('.moreIndicator').click(() => {
+    $('.moreIndicator').toggleClass('rot90, rot270')
+    $('.details').slideToggle()
   })
   // - toggle the rotation classes (rot90 and rot270)
   // - slideToggle the visibility of the .details section
 
   // Select the "Next Photo" button and add a click event to call showNextPhoto
-  $('.nextPhoto').click(()=> {
-    showNextPhoto() 
+  $('.nextPhoto').click(() => {
+    showNextPhoto()
   })
 
   // Select the "Previous Photo" button and add a click event to call showPrevPhoto
-  $('.prevPhoto').click(()=> {
-    showPrevPhoto() 
+  $('.prevPhoto').click(() => {
+    showPrevPhoto()
   })
 
   // Call fetchJSON() to load the initial set of images
@@ -34,14 +34,15 @@ $(document).ready(() => {
 })
 
 // Function to fetch JSON data and store it in mImages
-let mImages = [ ]
-function fetchJSON () {
+mImages = []
+function fetchJSON() {
   $.ajax({
     url: "mUrl",
     method: "GET",
     dataType: "json"
-      mImages = JSON.parse("mUrl");
+
   })
+  mImages = JSON.parse("mUrl");
 
   // Use $.ajax here to request the JSON data from mUrl
   // On success, parse the JSON and push each image object into mImages array
@@ -51,26 +52,31 @@ function fetchJSON () {
 }
 
 // Function to swap and display the next photo in the slideshow
-function swapPhoto () {
+function swapPhoto() {
   // Access mImages[mCurrentIndex] to update the image source and details
+  mImages = [mCurrentIndex] {
+    $('#photo').attr('src', mImages[mCurrentIndex].path);
+    $('.name').text(mImages[mCurrentIndex].name);
+    $('.oneMovie').text(mImages[mCurrentIndex].oneMovie);
+  }
   // Update the #photo element's src attribute with the current image's path
   // Update the .location, .description, and .date elements with the current image's details
 }
 
 // Advances to the next photo, loops to the first photo if the end of array is reached
-function showNextPhoto () {
+function showNextPhoto() {
   // Increment mCurrentIndex and call swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
 }
 
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
-function showPrevPhoto () {
+function showPrevPhoto() {
   // Decrement mCurrentIndex and call swapPhoto()
   // Ensure it loops to the end if mCurrentIndex is less than 0
 }
 
 // Starter code for the timer function
-function startTimer () {
+function startTimer() {
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
   // Consider using setInterval to achieve this functionality
   // Hint: Make sure only one timer runs at a time
