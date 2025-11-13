@@ -73,6 +73,8 @@ function showNextPhoto() {
 
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
 function showPrevPhoto() {
+  mCurrentIndex--
+  swapPhoto();
   // Decrement mCurrentIndex and call swapPhoto()
   // Ensure it loops to the end if mCurrentIndex is less than 0
 }
@@ -80,6 +82,7 @@ function showPrevPhoto() {
 // Starter code for the timer function
 function startTimer() {
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
+  const timer = setInterval(showNextPhoto, mWaitTime);
   // Consider using setInterval to achieve this functionality
   // Hint: Make sure only one timer runs at a time
 }
