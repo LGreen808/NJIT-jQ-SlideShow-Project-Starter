@@ -6,7 +6,7 @@ const mWaitTime = 5000 // Timer interval in milliseconds
 $(document).ready(() => {
   $('.details').hide() // Hide details initially
 
-  // Call a function here to start the timer for the slideshow
+
 
 
   // Select the moreIndicator button and add a click event to:
@@ -28,7 +28,7 @@ $(document).ready(() => {
   })
 
   // Call fetchJSON() to load the initial set of images
-  fetchJSON()
+  fetchJSON();
 })
 
 // Function to fetch JSON data and store it in mImages
@@ -40,7 +40,8 @@ function fetchJSON() {
     success: function (data) {
       mImages = data.images;
       console.log('Data fetched successfully:', data);
-      swapPhoto()
+      swapPhoto();
+// Call a function here to start the timer for the slideshow
       startTimer();
 
 
