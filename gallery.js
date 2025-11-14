@@ -29,7 +29,6 @@ $(document).ready(() => {
 
   // Call fetchJSON() to load the initial set of images
   fetchJSON()
-  startTimer(mImages)
 })
 
 // Function to fetch JSON data and store it in mImages
@@ -40,8 +39,10 @@ function fetchJSON() {
     method: "GET",
     dataType: "json",
     success: function (data) {
+      mImages = data.images;
       console.log('Data fetched successfully:', data);
       swapPhoto()
+      startTimer();
 
 
 
@@ -63,7 +64,7 @@ function fetchJSON() {
 // Function to swap and display the next photo in the slideshow
 function swapPhoto() {
   // Access mImages[mCurrentIndex] to update the image source and details
-  mImages = [mCurrentIndex]
+  const img = mImages[mCurrentIndex];
   $('#photo').attr('src', mImages[mCurrentIndex].path);
   $('.name').text(mImages[mCurrentIndex].name);
   $('.oneMovie').text(mImages[mCurrentIndex].oneMovie);
