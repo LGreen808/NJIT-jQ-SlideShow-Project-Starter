@@ -1,7 +1,7 @@
 let mCurrentIndex = 0 // Tracks the current image index
 let mImages = [] // Array to hold GalleryImage objects
 const mUrl = 'images.json' // Replace with actual JSON URL
-const mWaitTime = 5 // Timer interval in milliseconds
+const mWaitTime = 5000 // Timer interval in milliseconds
 
 $(document).ready(() => {
   $('.details').hide() // Hide details initially
@@ -11,8 +11,8 @@ $(document).ready(() => {
 
   // Select the moreIndicator button and add a click event to:
   $('.moreIndicator').on("click", () => {
-    $('.moreIndicator').toggleClass('rot90')
-    $('.previousIndicator').slideToggle('rot180')
+    $('.moreIndicator').toggleClass('rot90 rot270')
+    $('.details').slideToggle('rot180')
   })
   // - toggle the rotation classes (rot90 and rot270)
   // - slideToggle the visibility of the .details section
@@ -32,7 +32,6 @@ $(document).ready(() => {
 })
 
 // Function to fetch JSON data and store it in mImages
-mImages = []
 function fetchJSON() {
   $.ajax({
     url: mUrl,
@@ -78,14 +77,14 @@ function showNextPhoto() {
   swapPhoto();
   // Increment mCurrentIndex and call swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
-}
+} if (mCurrentIndex >= mImages.length) mCurrentIndex = 0;
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
 function showPrevPhoto() {
   mCurrentIndex--
   swapPhoto();
   // Decrement mCurrentIndex and call swapPhoto()
   // Ensure it loops to the end if mCurrentIndex is less than 0
-}
+} if (mCurrentIndex < 0) mCurrentIndex = mImages.length -1;
 // Starter code for the timer function
 function startTimer() {
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
