@@ -65,9 +65,9 @@ function fetchJSON() {
 function swapPhoto() {
   // Access mImages[mCurrentIndex] to update the image source and details
   const img = mImages[mCurrentIndex];
-  $('#photo').attr('src', mImages[mCurrentIndex].path);
-  $('.name').text(mImages[mCurrentIndex].name);
-  $('.oneMovie').text(mImages[mCurrentIndex].oneMovie);
+  $('#photo').attr('src', mImages[mCurrentIndex].imgPath);
+  $('.name').attr('src', mImages[mCurrentIndex].name);
+  $('.oneMovie').attr('src', mImages[mCurrentIndex].oneMovie);
 
   // Update the #photo element's src attribute with the current image's path
   // Update the .imgPath, .name, and .oneMovie elements with the current image's details
