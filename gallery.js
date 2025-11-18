@@ -75,27 +75,25 @@ function swapPhoto() {
 // Advances to the next photo, loops to the first photo if the end of array is reached
 function showNextPhoto() {
   mCurrentIndex++
-  swapPhoto();
   // Increment mCurrentIndex and call swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
-  if (mCurrentIndex >= mImages.length) mCurrentIndex = 0 {
-    [mCurrentIndex] = 0;
-  }
+  if (mCurrentIndex >= mImages.length) mCurrentIndex = 0;
+   swapPhoto();
 }
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
 function showPrevPhoto() {
   mCurrentIndex--
-  swapPhoto();
   // Decrement mCurrentIndex and call swapPhoto()
   // Ensure it loops to the end if mCurrentIndex is less than 0
-   if (mCurrentIndex < 0) mCurrentIndex = mImages.length -1 {
-     [mCurrentIndex] = 0;
-   }
+   if (mCurrentIndex < 0) mCurrentIndex = mImages.length -1;
+    swapPhoto();
 }
+let timerId;
 // Starter code for the timer function
 function startTimer() {
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
-  const timer = setInterval(showNextPhoto, mWaitTime);
+  if (timerId) clearInterval(timerId);  
+  timerId = setInterval(showNextPhoto, mWaitTime);
   // Consider using setInterval to achieve this functionality
   // Hint: Make sure only one timer runs at a time
 }
