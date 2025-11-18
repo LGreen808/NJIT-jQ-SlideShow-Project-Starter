@@ -18,12 +18,12 @@ $(document).ready(() => {
   // - slideToggle the visibility of the .details section
   
   // Select the "Next Photo" button and add a click event to call showNextPhoto
-  $('.nextPhoto').on("click", () => {
+  $('#nextPhoto').on("click", () => {
     showNextPhoto()
   })
 
   // Select the "Previous Photo" button and add a click event to call showPrevPhoto
-  $('.prevPhoto').on("click", () => {
+  $('#prevPhoto').on("click", () => {
     showPrevPhoto()
   })
 
