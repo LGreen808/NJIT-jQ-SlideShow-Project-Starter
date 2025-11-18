@@ -3,7 +3,7 @@ body {
     font-family: 'Century Gothic', sans-serif;
     background-image: url('img/BackgroundImage.jpg');
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 /* Main container for the slideshow and metadata */
@@ -37,7 +37,7 @@ body {
 .banner {
     font-size: 2rem; /* Increased font size for better readability */
     font-weight: bold;
-    color: #333;
+    color: #000000;
     /* Optional: Customize the text color */
 
 }
