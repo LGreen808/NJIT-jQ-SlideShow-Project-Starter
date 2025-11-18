@@ -11,7 +11,7 @@
             "oneMovie": "Goodfellas"
         },
         {
-            "imgPath": "img/3rd Director.jpg",
+            "imgPath": "img/3rd Director Image.jpg",
             "name": "Alfred Hitchock",
             "oneMovie": "Psycho"
         },
@@ -26,27 +26,27 @@
             "oneMovie": "The Godfather"
         },
         {
-            "imgPath": "img/6th Director.jpg",
+            "imgPath": "img/6th Director Image.jpg",
             "name": "Woddy Allen",
             "oneMovie": "Annie Hall"
         },
         {
-            "imgPath": "img/7th Director.jpg",
+            "imgPath": "img/7th Director Image.webp",
             "name": "Billy Wilder",
             "oneMovie": "Some Like It Hot"
         },
         {
-            "imgPath": "img/8th Director.jpg",
+            "imgPath": "img/8th Director Image.jpg",
             "name": "Charlie Chaplin",
             "oneMovie": "City Lights"
         },
         {
-            "imgPath": "img/9th Director.jpg",
+            "imgPath": "img/9th Image Director.jpg",
             "name": "Christopher Nolan",
             "oneMovie": "Inception"
         },
         {
-            "imgPath": "img/10th Director.jpg",
+            "imgPath": "img/10th Director Image.jpg",
             "name": "Quentin Tarintino",
             "oneMovie": "Pulp Fiction"
         }
