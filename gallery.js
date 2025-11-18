@@ -66,8 +66,8 @@ function swapPhoto() {
   // Access mImages[mCurrentIndex] to update the image source and details
   const img = mImages[mCurrentIndex];
   $('#photo').attr('src', mImages[mCurrentIndex].imgPath);
-  $('.name').attr('src', mImages[mCurrentIndex].name);
-  $('.oneMovie').attr('src', mImages[mCurrentIndex].oneMovie);
+  $('.name').text(img.name);
+  $('.oneMovie').text(img.oneMovie);
 
   // Update the #photo element's src attribute with the current image's path
   // Update the .imgPath, .name, and .oneMovie elements with the current image's details
@@ -78,14 +78,16 @@ function showNextPhoto() {
   swapPhoto();
   // Increment mCurrentIndex and call swapPhoto()
   // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
-} if (mCurrentIndex >= mImages.length) mCurrentIndex = 0;
+  if (mCurrentIndex >= mImages.length) mCurrentIndex = 0;
+}
 // Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
 function showPrevPhoto() {
   mCurrentIndex--
   swapPhoto();
   // Decrement mCurrentIndex and call swapPhoto()
   // Ensure it loops to the end if mCurrentIndex is less than 0
-} if (mCurrentIndex < 0) mCurrentIndex = mImages.length -1;
+   if (mCurrentIndex < 0) mCurrentIndex = mImages.length -1;
+}
 // Starter code for the timer function
 function startTimer() {
   // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
